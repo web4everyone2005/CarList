@@ -1,0 +1,187 @@
+/* Reset và Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Car Card Styles */
+.car-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.car-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background-color: #f8f9fa;
+}
+
+.favorite-btn.favorited .fa-heart {
+  color: #dc3545 !important;
+}
+
+/* Car Image Styles */
+.car-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  min-height: 150px;
+}
+
+.car-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.05);
+}
+
+/* Car Info Styles */
+.car-info {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.car-specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.spec-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.spec-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Price Styles */
+.car-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.price-amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.price-unit {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .car-specs {
+    justify-content: center;
+  }
+  
+  .spec-item {
+    font-size: 0.8rem;
+  }
+  
+  .price-amount {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding: 10px 0;
+  }
+  
+  .car-card {
+    padding: 15px;
+  }
+  
+  .car-specs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}
